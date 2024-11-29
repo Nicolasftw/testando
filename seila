@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f0f0;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .heart {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Você pode me ligar?</h1>
+
+    <button class="button yes" onclick="respostaSim()">Sim</button>
+    <button class="button no" onclick="respostaNao()">Não</button>
+
+    <div id="resposta" class="result"></div>
+
+    <script>
+        function respostaSim() {
+            document.getElementById('resposta').innerHTML = "Agora, por favor, gata!";
+        }
+
+        function respostaNao() {
+            let resultado = '';
+            for (let i = 0; i < 5000; i++) {
+                resultado += 'SIMMM <span class="heart">❤️</span> ';
+            }
+            document.getElementById('resposta').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
